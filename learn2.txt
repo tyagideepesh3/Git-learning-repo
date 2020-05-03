@@ -31,4 +31,7 @@ user.name=jOh
 user.email=j0h@example.com
 core.editor=nano
 ----------------------------------------------------------------------------------------------------------------->
-I ADD A NEW DATA
+POINT 3-> in any branch 1-modify
+			2-add
+			3-commit
+	to observe the change in the two
