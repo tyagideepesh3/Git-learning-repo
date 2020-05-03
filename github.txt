@@ -1,0 +1,108 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\HP>cd complete git
+The system cannot find the path specified.
+
+C:\Users\HP>cd desktop
+
+C:\Users\HP\Desktop>cd complete git
+
+--------------------->c:\users\hp\desktop\complete git>git remote add origin https://github.com/tyagid
+--------------------->eepesh3/git-learning-repo.git
+
+--------------------->C:\Users\HP\Desktop\complete git>git remote -v
+origin  https://github.com/tyagideepesh3/Git-learning-repo.git (fetch)
+origin  https://github.com/tyagideepesh3/Git-learning-repo.git (push)
+
+--------------------->C:\Users\HP\Desktop\complete git>git push -u origin master
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (31/31), 6.00 KiB | 409.00 KiB/s, done.
+Total 31 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/tyagideepesh3/Git-learning-repo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Switched to branch 'dev'
+
+--------------------->C:\Users\HP\Desktop\complete git>git push  origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/tyagideepesh3/Git-learning-repo/pull/new/dev
+remote:
+To https://github.com/tyagideepesh3/Git-learning-repo.git
+ * [new branch]      dev -> dev
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Already on 'dev'
+
+C:\Users\HP\Desktop\complete git>git add learn3.txt
+
+C:\Users\HP\Desktop\complete git>git commit -m "learn3 but not usefull"
+[dev 311df00] learn3 but not usefull
+ 1 file changed, 1 insertion(+)
+ create mode 100644 learn3.txt
+
+C:\Users\HP\Desktop\complete git>git status
+On branch dev
+nothing to commit, working tree clean
+
+--------------------->C:\Users\HP\Desktop\complete git>git push origin dev
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 154.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/tyagideepesh3/Git-learning-repo.git
+   daeeadb..311df00  dev -> dev
+
+--------------------->C:\Users\HP\Desktop\complete git>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+--------------------->C:\Users\HP\Desktop\complete git>git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.32 KiB | 6.00 KiB/s, done.
+From https://github.com/tyagideepesh3/Git-learning-repo
+   2b9fcfc..deba48f  master     -> origin/master
+   311df00..8c9264d  dev        -> origin/dev
+Updating 2b9fcfc..deba48f
+Fast-forward
+ learn3.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+--------------------->C:\Users\HP\Desktop\complete git>git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 776 bytes | 4.00 KiB/s, done.
+From https://github.com/tyagideepesh3/Git-learning-repo
+   deba48f..0d24280  master     -> origin/master
+Updating deba48f..0d24280
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\HP\Desktop\complete git>git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
