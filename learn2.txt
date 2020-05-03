@@ -32,3 +32,7 @@ user.email=j0h@example.com
 core.editor=nano
 ----------------------------------------------------------------------------------------------------------------->
 I ADD A NEW DATA
+------------------------------------------------------------------------------------------------------------------>
+POINT2 ->
+you can commit more than one file in initial commit
+acc to you and when you modify it than you get an another commit
