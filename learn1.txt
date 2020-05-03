@@ -1,0 +1,12 @@
+cd Desktop ---> to go to desktop
+cd---> change directory
+cls ---> to clear the cmd window.
+dir ---> to list all the files present in it.
+cd "folder name" --> to get into the folder.
+git init ---> to initialize the new or existing project.
+git status---> to get the status.(you are in master node)(your untracked file , your staging , your commite)
+git add<file_name> ---> add one or more file to staging index.
+git commit -m "commit message" ---> it would commit all your files in the staging area and if you want to make the changes
+		and get back into orignal position ie, act as an check point.
+		commit message ---> tell about the changes you have made after this point.helpfull in the case when you work
+		in grp.

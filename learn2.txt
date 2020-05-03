@@ -1,0 +1,33 @@
+ERROR1--------------------------------------------------------------------------------------------------------->
+git commit -m "examples"
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'j0h@sx.(none)')
+j0h@sx:~/Learning-OpenCV-3_examples$   git config --global user.email "you@example.com"
+
+SOLUTION 1------------------------------------------------------------------------------------------------------>
+Setting Your Git Identity
+First, your identity should be simply your full name and email address which could be your GitHub username and email combo. But this is not a verification stage as much as a “tag” to identify you; this has nothing to do directly with your GitHub username unless they are indeed one and the same.
+
+So perhaps your version of those commands would be:
+
+git config --global user.email "j0h@example.com"
+git config --global user.name "jOh"
+And then check those values like this:
+
+git config -l
+Output should be something like this; modified version of my own output for that command so the credential.helper and core.editor settings might be different for you:
+
+credential.helper=osxkeychain
+user.name=jOh
+user.email=j0h@example.com
+core.editor=nano
+----------------------------------------------------------------------------------------------------------------->
