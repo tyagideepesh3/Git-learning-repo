@@ -42,4 +42,299 @@ I ADD A NEW DATA
 POINT2 ->
 you can commit more than one file in initial commit
 acc to you and when you modify it than you get an another commit
->>>>>>> dev
+------------------------------------------------------------------------------------------------------------------>
+CODE THAT MIGHT HELP TO LEARN
+
+C:\Users\HP\Desktop>cd complete git
+
+C:\Users\HP\Desktop\complete git>git init
+Initialized empty Git repository in C:/Users/HP/Desktop/complete git/.git/
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        learn1.txt
+        learn2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\HP\Desktop\complete git>git add learn1.txt
+
+C:\Users\HP\Desktop\complete git>git add learn2.txt
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   learn1.txt
+        new file:   learn2.txt
+
+
+C:\Users\HP\Desktop\complete git>git commit -m "initial commit"
+[master (root-commit) e8e0752] initial commit
+ 2 files changed, 45 insertions(+)
+ create mode 100644 learn1.txt
+ create mode 100644 learn2.txt
+
+C:\Users\HP\Desktop\complete git>git log
+commit e8e075222abbd57675af08e8758e15d3c5ac7246 (HEAD -> master)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:17:11 2020 -0700
+
+    initial commit
+
+C:\Users\HP\Desktop\complete git>git commit -m "learn2 commit in head"
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\HP\Desktop\complete git>git log
+commit e8e075222abbd57675af08e8758e15d3c5ac7246 (HEAD -> master)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:17:11 2020 -0700
+
+    initial commit
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   learn2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\HP\Desktop\complete git>git add learn2.txt
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   learn2.txt
+
+
+C:\Users\HP\Desktop\complete git>git commit -m "learn2 commit in head"
+[master ff0e212] learn2 commit in head
+ 1 file changed, 1 insertion(+)
+
+C:\Users\HP\Desktop\complete git>git log
+commit ff0e212a9dac37fc130b494f1c1e6970505418b1 (HEAD -> master)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:22:28 2020 -0700
+
+    learn2 commit in head
+
+commit e8e075222abbd57675af08e8758e15d3c5ac7246
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:17:11 2020 -0700
+
+    initial commit
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\HP\Desktop\complete git>git branch dev
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\HP\Desktop\complete git>git add learn2.txt
+
+C:\Users\HP\Desktop\complete git>git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   learn2.txt
+
+
+C:\Users\HP\Desktop\complete git>git checkout master
+Switched to branch 'master'
+M       learn2.txt
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Switched to branch 'dev'
+M       learn2.txt
+
+C:\Users\HP\Desktop\complete git>git commit -m "commit in the dev branch"
+[dev df5b4b6] commit in the dev branch
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\HP\Desktop\complete git>git log
+commit df5b4b6bae770a27a6ee945ff00c5435c467b486 (HEAD -> dev)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:28:44 2020 -0700
+
+    commit in the dev branch
+
+commit ff0e212a9dac37fc130b494f1c1e6970505418b1 (master)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:22:28 2020 -0700
+
+    learn2 commit in head
+
+commit e8e075222abbd57675af08e8758e15d3c5ac7246
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:17:11 2020 -0700
+
+    initial commit
+
+C:\Users\HP\Desktop\complete git>git checkout master
+Switched to branch 'master'
+
+C:\Users\HP\Desktop\complete git>git add learn2.txt
+
+C:\Users\HP\Desktop\complete git>git commit -m "modify in master after the chang
+e"
+[master 1e9e9f7] modify in master after the change
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+C:\Users\HP\Desktop\complete git>git log
+commit 1e9e9f7d52aebdbf6082e0b04184747a0a3a8906 (HEAD -> master)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:32:34 2020 -0700
+
+    modify in master after the change
+
+commit ff0e212a9dac37fc130b494f1c1e6970505418b1
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:22:28 2020 -0700
+
+    learn2 commit in head
+
+commit e8e075222abbd57675af08e8758e15d3c5ac7246
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:17:11 2020 -0700
+
+    initial commit
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\HP\Desktop\complete git>git checkout master
+Switched to branch 'master'
+
+C:\Users\HP\Desktop\complete git>git merge dev
+Auto-merging learn2.txt
+CONFLICT (content): Merge conflict in learn2.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\HP\Desktop\complete git>git merge dev
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\HP\Desktop\complete git>\
+'\' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\HP\Desktop\complete git>git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   learn2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\HP\Desktop\complete git>git commit -m "hiiiiiiiii..."
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       learn2.txt
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+error: you need to resolve your current index first
+learn2.txt: needs merge
+
+C:\Users\HP\Desktop\complete git>git commit -m "hiiiiiiiii..ssasa."
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       learn2.txt
+
+C:\Users\HP\Desktop\complete git>git merge dev
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\HP\Desktop\complete git>git add learn2.txt
+
+C:\Users\HP\Desktop\complete git>git commit -m "hio rabba"
+[master 98aa5cd] hio rabba
+
+C:\Users\HP\Desktop\complete git>git log
+commit 98aa5cdc9d557fca7d6ecf44f328fbe4e5b22bf7 (HEAD -> master)
+Merge: 1e9e9f7 df5b4b6
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:48:47 2020 -0700
+
+    hio rabba
+    hio rabba
+commit 98aa5cdc9d557fca7d6ecf44f328fbe4e5b22bf7 (HEAD -> master)
+Merge: 1e9e9f7 df5b4b6
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:48:47 2020 -0700
+
+    hio rabba
+
+    hio rabba
+    hio rabba
+
+commit 1e9e9f7d52aebdbf6082e0b04184747a0a3a8906
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:32:34 2020 -0700
+
+    modify in master after the change
+
+commit df5b4b6bae770a27a6ee945ff00c5435c467b486 (dev)
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:28:44 2020 -0700
+
+    commit in the dev branch
+
+commit ff0e212a9dac37fc130b494f1c1e6970505418b1
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:22:28 2020 -0700
+
+    learn2 commit in head
+
+commit e8e075222abbd57675af08e8758e15d3c5ac7246
+Author: tyagideepesh3 <tyagideepesh3@gmail.com>
+Date:   Sat May 2 22:17:11 2020 -0700
+
+    initial commit
+
+C:\Users\HP\Desktop\complete git>git merge dev
+Already up to date.
+
+C:\Users\HP\Desktop\complete git>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\HP\Desktop\complete git>
+------------------------------------------------------------------------------------------------------------------>
