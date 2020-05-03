@@ -31,7 +31,15 @@ user.name=jOh
 user.email=j0h@example.com
 core.editor=nano
 ----------------------------------------------------------------------------------------------------------------->
+
 POINT 3-> in any branch 1-modify
 			2-add
 			3-commit
 	to observe the change in the two
+
+I ADD A NEW DATA
+------------------------------------------------------------------------------------------------------------------>
+POINT2 ->
+you can commit more than one file in initial commit
+acc to you and when you modify it than you get an another commit
+>>>>>>> dev
